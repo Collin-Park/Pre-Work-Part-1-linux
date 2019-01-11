@@ -1,0 +1,253 @@
+/* Global resets */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	color: #424242;
+	line-height: 1.4;
+}
+
+/* Fonts */
+h1 {
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.container {
+	margin: 2em auto;
+	max-width: 630px;
+	text-align: center;
+}
+
+/* The following font information and color codes are provided for you.  They do not match the prototype exactly, but they are fine to use for the assignment and doing so does not count against you.  They are simply meant to help you save time.  We would like everyone to have as close to a pixel-perfect match to the prototype as possible.  If you do find a font/color that matches more precisely, please share it with the team so we can improve the activity for future applicants.  Thank you!  Happy coding!
+
+	FONTS:
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+
+  COLORS:
+  blue: #20A1D4;
+  green: #1CBC2C;
+  orange: #EF5F3C;
+  black: #424242;
+  grey: #777;
+  light grey: #eaeaea;
+*/
+
+/* Your CSS code goes here */
+a:link {
+	text-decoration: none;
+}
+
+p, input{
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	font-size: 14.4px;
+}
+
+.prototype {
+	position:absolute;
+	margin:auto;
+	right:0px;
+	left: -300px;
+}
+
+.canvas {
+	position: absolute;
+	margin: auto;
+	right: -300px;
+	left: 0;
+	top: 144.5px;
+	height: 334px;
+	width: 303px;
+	background-color: white;
+	padding-left: 21px;
+	padding-right: 21px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.needed {
+	background-color: #424242;
+	height: 43px;
+	width: 261px;
+	padding-top: 13px;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	font-size: 11.5px;
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.arrowdown {
+	position: relative;
+	left: 222px;
+	top: -1px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #424242;
+}
+
+.middle {
+	position: relative;
+	top: 2px;
+	border-style: solid;
+	border-color: #dedede;
+	height: 202px;
+	width: 261px;
+	border-width: 1px;
+	box-shadow: 0px 1px 2px -0.5px #dcdcdc;
+}
+
+.orangebar {
+	position: relative;
+	top: -1px;
+	right: 1px;
+	height: 12px;
+	width: 261px;
+	background-color: #f15e33;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dedede;
+	z-index: 5;
+}
+
+.whitebar {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	height: 12px;
+	width: 66px;
+	background-color: #fafafa;
+	border-style: solid;
+	border-left-style: none;
+	border-width: 1px;
+	border-color: #dedede;
+	z-index: 10;
+}
+
+.insidemiddle {
+	position: relative;
+	padding: 10px 19px;
+}
+
+.insidemiddle p {
+	font-size: 10.5px;
+	color:#828282;
+}
+
+.orangetext {
+	color: #f16137;
+	font-weight: 600;
+}
+
+.middletopline {
+	position: relative;
+	top: 2px;
+}
+
+.middlemiddlelines {
+	position: relative;
+	top: 18px;
+}
+
+.middlebuttons {
+	position: relative;
+	height: 45px;
+	top: 38px;
+}
+
+.money {
+	position: relative;
+	height: 43px;
+	width: 104px;
+	background-image: url('data:image/png;base64,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');
+	background-size: 15%;
+	background-position: 0px 10px;
+	background-repeat: no-repeat;
+	border-style: solid;
+	border-width: 1.1px;
+	border-color: #dedede;
+	border-radius: 3px;
+	padding-left: 18px;
+	padding-bottom: 2px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.givenow {
+	display: inline-block;
+	position: absolute;
+	background-color: #00be1c;
+	border-color: #0db525;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	box-shadow: 0px 1px 0.2px -0.5px #0db525;
+	top: 0.3px;
+	right:0;
+	height: 41px;
+	width: 104px;
+	color: white;
+	font-size:13px;
+	font-weight: 600;
+	padding-top: 12px;
+	text-align: center;
+}
+
+.link {
+	color: #1ca4d7;
+}
+
+
+.whygive {
+	position: relative;
+	top: 44px;
+}
+
+.bottom {
+	font-size: 10.3px;
+}
+
+.saveforlater {
+	display: inline-block;
+	position: relative;
+	top: 14.7px;
+	height: 33px;
+	width: 122px;
+	background-color: #fafafa;
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 600;
+	border-style: solid;
+	border-color: #e9e9e9;
+	color: #777777;
+	border-width: 1px;
+	border-radius: 3px;
+	box-shadow: 0px 3px 1px -2px #cecccc;
+}
+
+.tellyourfriends {
+	display: inline-block;
+	position: relative;
+	left: 12.5px;
+	top: 14.7px;
+	height: 33px;
+	width: 122px;
+	background-color: #fafafa;
+  text-align: center;
+	padding-top: 10px;
+	font-weight: 600;
+	border-style: solid;
+	border-color: #e9e9e9;
+	color: #777777;
+	border-width: 1px;
+	border-radius: 3px;
+	box-shadow: 0px 3px 1px -2px #cecccc;
+}

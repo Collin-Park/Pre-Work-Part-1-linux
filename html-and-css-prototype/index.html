@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML/CSS Prototype</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Recreate this using HTML &amp; CSS</h1>
+      <img class="prototype" src="https://s3.amazonaws.com/f.cl.ly/items/2z3C3Z0L2Q0R282p1V0z/Image%202014-12-19%20at%2010.07.09%20AM.png" width="303" />
+    </div>
+
+    <!-- Your code goes here -->
+    <div class="canvas">
+      <div class="top">
+        <p class="needed"><b>$167</b> still needed for this project</p>
+        <p class="arrowdown"></p>
+      </div>
+      <div class="middle">
+        <p>
+          <p class="orangebar"></p>
+          <p class="whitebar"></p>
+        </p>
+        <div class="insidemiddle">
+          <p class="middletopline"><span class="orangetext">Only 3 days left</span> to fund this project.</p>
+          <p class="middlemiddlelines">Join the <b>42</b> other donors who have already supported this project. Every dollar helps.</p>
+          <div class="middlebuttons">
+            <input class="money" type="text" value="50">
+            <a href=# class="givenow" onclick="alert('Thank you for donating!')">Give Now</a>
+          </div>
+          <p class="whygive"><a class="link" href=https://www.google.com/search?q=why+give+%2450><i>Why give $50?</i></a></p>
+        </div>
+      </div>
+      <div class="bottom">
+        <a href=# class="saveforlater"  onclick="alert('Saved for later!')">Save for later</a>
+        <a href=# class="tellyourfriends"  onclick="alert('Thanks for sharing!')">Tell your friends</a>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Plan and execution
+
+1. First analyze the size (width vs height) of the prototype using inspect. Create a div with the same pixel area this "canvas" will encapsulates all the elements. This will be the div within which we add all the other divs and elements live. This means that the image will be static and will not resize
+
+  - The dimensions of the canvas is 303px w by 334.16px h
+  - The padding within canvas has two-fold symmetry, horizontal padding at 21px and vertical padding at 16px.
+
+2. Have 3 div's within the canvas mentioned in 1,
+    (top) the top div will contain information on the $167 still needed for this project.
+      - the height of the top div is 43px, the width is 261 px (this width is equal for three divs)
+
+    (middle) the second div will contain the main info ranging from the orange bar, down to "why give 50"
+      - the height of the whole middle container is about 202px and width is 261px
+      - there is ~10.5 pixel gap between (top) and (middle) this can be specified using relative position
+      - I'll actually take the progress bar (orange and white bar) out of this div and put it above the main text of the middle box. the orange progress bar is 11 px in height, 261 px wide, we can overlay a white bar on the top, aligned with the right, it is 11 px in height and 66px wide
+      - the padding inside the div inside middle looks two-fold, equal in horizontal and equal in vertical. the horizontal padding is 19px, the vertical padding is 10 px.
+      - both the form input and button are 104px wide, and 43px high. and are y-px from the element above it
+
+    (bottom) the third div will contain the two buttons for save for later and tell your friends.
+      - these buttons are of the same size, 33px high and 122 px wide each. these buttons exist 12 px below the middle box
+
+3. The rest of the html part has to do with populating each divs and placing the elements after careful consideration using the box model in CSS
+-->
